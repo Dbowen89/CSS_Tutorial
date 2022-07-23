@@ -1,3 +1,48 @@
+:root {
+  --clr-accent-400: hsl(12, 88%, 59%);
+  --clr-accent-100: hsl(13,100%, 96%);
+
+  --clr-primary-400: hsl(228, 39%, 23%);
+
+  --clr-neutral-100: hsl(227, 12%, 61%);
+  --clr-neutral-900: hsl(0,0%,98%);
+
+  --ff-primary: 'Be Vietnam Pro', sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semibold: 500;
+  --fw-bold: 900;
+
+  --fs-300: .8125rem; /* font size is problematic due to difficulty in setting up a system to modify fonts easily  */
+  --fs-400: .875rem;
+  --fs-500: 0.9375rem;
+  --fs-600: 1rem;
+  --fs-700: 1.875rem;
+  --fs-800: 2.5rem;
+  --fs-900: 3.5rem;
+
+  --fs-body: var(--fs-400);
+  --fs-primaryheading: var(--fs-800);
+  --fs-secondaryheaing: var(--fs-700);
+  --fs-nav: var(--fs-500);
+  --fs-button: var(--fs-300);
+}
+
+@media (min-width: 50em) {
+  :root {
+
+    --fs-body: var(--fs-500);
+    --fs-nav: var(--fs-300);
+    --fs-primaryheading: var(--fs-900);
+    --fs-secondaryheaing: var(--fs-800);
+   
+  }
+}
+
+
 /* Box sizing rules */
 *,
 *::before,
@@ -24,10 +69,9 @@ html:focus-within {
 }
 
 /* Set core body defaults */
+html,
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  height: 100%;
 }
 
 /* A elements that don't have a class get default styles */
@@ -37,17 +81,10 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img,
-picture {
+picture,
+svg {
   max-width: 100%;
   display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -65,3 +102,87 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* utility classes */
+
+.text-primary-400 {
+  color: var(--clr-primary-400)
+}
+
+.text-accent-400 {
+  color: var(--clr-accent-400)
+}
+
+.text-accent-100 {
+  color: var(--clr-accent-100)
+}
+
+.text-neutral-100 {
+  color: var(--clr-neutral-100)
+}
+
+.text-neutral-400 {
+  color: var(--clr-neutral-400)
+}
+
+.bg-primary-400 {
+  background-color: var(--clr-primary-400)
+}
+
+.bg-accent-400 {
+  background-color: var(--clr-accent-400)
+}
+
+.bg-accent-100 {
+  background-color: var(--clr-accent-100)
+}
+
+.bg-neutral-100 {
+  background-color: var(--clr-neutral-100)
+}
+
+.bg-neutral-400 {
+  background-color: var(--clr-neutral-400)
+}
+
+.fw-bold{ font-weight: var(--fw-bold); }
+.fw-semibold{ font-weight: var(--fw-semibold); }
+.fw-regular{ font-weight: var(--fw-regular); }
+
+.fs-primaryheading {
+  font-size: var(--fs-primaryheading);
+}
+
+.fs-secondaryheading {
+  font-size: var(--fs-secondaryheading);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
